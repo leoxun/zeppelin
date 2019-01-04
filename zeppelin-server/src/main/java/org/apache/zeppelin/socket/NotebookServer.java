@@ -636,6 +636,10 @@ public class NotebookServer extends WebSocketServlet
       } catch (Exception e) {
         e.printStackTrace();
       }
+      if (null == interpreterGroup) {
+        continue;
+      }
+
       RemoteAngularObjectRegistry registry = (RemoteAngularObjectRegistry)
           interpreterGroup.getAngularObjectRegistry();
 
